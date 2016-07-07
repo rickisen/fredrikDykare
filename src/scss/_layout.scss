@@ -1,0 +1,83 @@
+// ==== LAYOUT ==== //
+
+body > header {
+  background-color: lightgrey;
+  overflow:hidden;
+
+  .site-title {
+    margin-top: 0;
+  }
+
+  .site-description {
+    @extend %hide;
+  }
+
+  > * {
+    @include scut-center-block($width-site);
+  }
+}
+
+body {
+  background-color: grey;
+
+  .wrap-main {
+    @extend %clearfix;
+    box-sizing: border-box; // Makes life a little easier
+    min-height: 90vh;
+    margin: 5vh 0;
+
+    @include media-above($break-large) {
+      @include scut-center-block($width-site);
+    }
+
+    main {
+      @extend %spacer-below;
+      background-color: white;
+      padding:1rem;
+      top-margin:none;
+
+      article {
+        @extend %spacer-below-2;
+      }
+    }
+  }
+}
+
+body > footer {
+  background-color: black;
+  color: white;
+
+  > * {
+    @include scut-center-block($width-site);
+  }
+}
+
+#wpadminbar {
+  background-color: rgba(50,50,50,0.5);
+}
+
+.widget-area {
+  display: flex;
+  .widget {
+    flex:1;
+    margin:0 1em;
+  }
+}
+
+.site-navigation {
+  display: none;
+  @include media-above($break-medium) {
+    display: block !important; // Handles an edge case where user resizes after menu is hidden on smaller screens
+  }
+  &.active {
+    display: block;
+  }
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}

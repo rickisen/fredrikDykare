@@ -9,6 +9,21 @@ body {
   color: color(text);
   font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Arimo, sans-serif;
   line-height: 1.44444;
+
+  > header {
+    background: color(header-background);
+  }
+
+  main {
+    padding: 1rem;
+    top-margin: none;
+    background: color(main-background);
+  }
+
+  > footer {
+    background: color(footer-background);
+    color: white;
+  }
 }
 
 h1,

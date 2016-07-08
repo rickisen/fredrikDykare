@@ -1,77 +1,87 @@
 // ==== LAYOUT ==== //
 
-body > header {
-  background-color: lightgrey;
-  overflow:hidden;
-
-  .site-title {
-    margin-top: 0;
-  }
-
-  .site-description {
-    @extend %hide;
-  }
-
-  > * {
-    @include scut-center-block($width-site);
-  }
-}
-
 body {
-  background-color: grey;
+  > header {
+    overflow:hidden;
+
+    .site-navigation {
+      display: none;
+
+      li {
+        float: none;
+      }
+
+      @include media-above($break-medium) {
+        // Handles an edge case where user resizes
+        // after menu is hidden on smaller screens
+        display: block !important;
+
+        li {
+          float: left;
+        }
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .site-title {
+      margin-top: 0;
+    }
+
+    .site-description {
+      @extend %hide;
+    }
+
+    > * {
+      @include scut-center-block($width-site);
+    }
+  }
 
   .wrap-main {
     @extend %clearfix;
     box-sizing: border-box; // Makes life a little easier
-    min-height: 90vh;
-    margin: 5vh 0;
+
+    @include media-above($break-medium) {
+      margin: 5vh 0;
+      min-height: 90vh;
+    }
 
     @include media-above($break-large) {
       @include scut-center-block($width-site);
     }
 
     main {
-      @extend %spacer-below;
-      background-color: white;
-      padding:1rem;
-      top-margin:none;
+      @include media-below($break-medium) {
+        min-height: 90vh;
+      }
 
-      article {
+      > * {
         @extend %spacer-below-2;
+      }
+    }
+  }
+
+  > footer {
+    > * {
+      @include scut-center-block($width-site);
+    }
+
+    .widget-area {
+      display: flex;
+      .widget {
+        flex:1;
+        margin:0 1em;
       }
     }
   }
 }
 
-body > footer {
-  background-color: black;
-  color: white;
-
-  > * {
-    @include scut-center-block($width-site);
-  }
-}
+// ==== GENERAL ==== //
 
 #wpadminbar {
   background-color: rgba(50,50,50,0.5);
-}
-
-.widget-area {
-  display: flex;
-  .widget {
-    flex:1;
-    margin:0 1em;
-  }
-}
-
-.site-navigation {
-  display: none;
-  @include media-above($break-medium) {
-    display: block !important; // Handles an edge case where user resizes after menu is hidden on smaller screens
-  }
-  &.active {
-    display: block;
-  }
 }
 
 .alignright {

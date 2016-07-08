@@ -4,7 +4,10 @@
 
 // == MEDIA QUERIES == //
 
-// Master media query mixin; only for use with screens, of course; should work with raw integers or pixel values; adapted from Kipple: https://github.com/synapticism/kipple
+// Master media query mixin
+// only for use with screens, of course
+// should work with raw integers or pixel values
+// adapted from Kipple: https://github.com/synapticism/kipple
 @mixin media($min-query: null, $max-query: null) {
   @if $min-query == null and $max-query == null {
     @warn "Mixin k-media() received two null values; no output.";
@@ -33,16 +36,12 @@
   @include media($min-query, $max-query - 1) { @content; }
 }
 
-
-
 // == LAYOUT == //
 
 // Margins and positioning helper function
 @function spacer($val: 1) {
   @return $spacer * $val + 0px;
 }
-
-
 
 // == SETTINGS == //
 

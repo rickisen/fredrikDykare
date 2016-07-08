@@ -9,10 +9,6 @@
               <?php the_content(); ?>
               <?php wp_link_pages(); ?>
             </div>
-            <footer class="entry-meta">
-              <?php printf( __( 'Posted <time datetime="%1$s">%2$s</time> by %3$s. ', 'descent' ), get_post_time('c'), get_the_date(), get_the_author() ); ?>
-              <?php _e( 'Categories: ', 'descent' ); the_category( ', ' ); echo '. '; ?>
-            </footer>
           </article>
         <?php endwhile ?>
       <?php else : ?>

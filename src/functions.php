@@ -10,9 +10,9 @@ require_once( trailingslashit( get_stylesheet_directory() ) . 'inc/assets.php' )
 require_once( trailingslashit( get_stylesheet_directory() ) . 'inc/navigation.php' );
 
 // the bare minimum to get the theme up and running
-function voidx_setup() {
+function descent_setup() {
   // Language loading
-  load_theme_textdomain( 'voidx', trailingslashit( get_template_directory() ) . 'languages' );
+  load_theme_textdomain( 'descent', trailingslashit( get_template_directory() ) . 'languages' );
 
   // HTML5 support; mainly here to get rid of some nasty default styling that WordPress used to inject
   add_theme_support( 'html5', array( 'search-form', 'gallery' ) );
@@ -27,17 +27,17 @@ function voidx_setup() {
     $content_width = (int) 960;
 
   // Register header and footer menus
-  register_nav_menu( 'header', __( 'Header menu', 'voidx' ) );
-  register_nav_menu( 'footer', __( 'Footer menu', 'voidx' ) );
+  register_nav_menu( 'header', __( 'Header menu', 'descent' ) );
+  register_nav_menu( 'footer', __( 'Footer menu', 'descent' ) );
 }
-add_action( 'after_setup_theme', 'voidx_setup', 11 );
+add_action( 'after_setup_theme', 'descent_setup', 11 );
 
 // Footer widget area declaration
 function footer_widgets_init() {
   register_sidebar( array(
-    'name'          => __( 'Footer Widget Area', 'voidx' ),
+    'name'          => __( 'Footer Widget Area', 'descent' ),
     'id'            => 'footer-widget-area',
-    'description'   => __( 'General widget area', 'voidx' ),
+    'description'   => __( 'General widget area', 'descent' ),
     'before_widget' => '<section class="widget">',
     'after_widget'  => '</section>',
     'before_title'  => '<h4>',

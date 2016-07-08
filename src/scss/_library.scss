@@ -60,3 +60,12 @@
 @function metadata($request) {
   @return config($_metadata, $request);
 }
+
+@mixin bgimg {
+  background-color:grey;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  min-width:50px;
+  min-height:50px;
+}

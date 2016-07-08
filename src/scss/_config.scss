@@ -20,10 +20,11 @@ $_color: (
   text: #333,
   link: steelblue,
   link-muted: steelblue,
-  body-background: grey,
-  header-background: white,
-  footer-background: black,
-  main-background: white,
+  // body-background: linear-gradient(to bottom, #dfeeff, #9ac0d8, #4085a0, #286c8a, #005668, #004946, #004832, #024226, #023620),
+  body-background: linear-gradient(to bottom, rgba(61,153,244,1) 0%,rgba(73,129,188,1) 29%,rgba(14,28,56,1) 91%,rgba(0,12,40,1) 100%),
+  header-background: #fcfcfc,
+  footer-background: rgba(0,0,0,0.2),
+  main-background: #fcfcfc,
 );
 
 // Metadata; use metadata() to access

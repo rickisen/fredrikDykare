@@ -43,7 +43,7 @@ body {
     @extend %clearfix;
     box-sizing: border-box; // Makes life a little easier
 
-    @include media-above($break-medium) {
+    @include media-above($break-large) {
       margin: 5vh 0;
       min-height: 90vh;
     }

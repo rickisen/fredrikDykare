@@ -11,10 +11,12 @@ body {
   line-height: 1.44444;
 
   > header {
+    @extend %drop-shadow;
     background: color(header-background);
   }
 
   main {
+    @extend %drop-shadow;
     padding: 1rem;
     top-margin: none;
     background: color(main-background);

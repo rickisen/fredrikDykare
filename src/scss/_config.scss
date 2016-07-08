@@ -20,20 +20,23 @@ $_color: (
   text: #333,
   link: steelblue,
   link-muted: steelblue,
-  body-background: white
+  body-background: grey,
+  header-background: white,
+  footer-background: black,
+  main-background: white,
 );
 
 // Metadata; use metadata() to access
 $_metadata: (
-  theme-name:               "Voidx"
-, theme-uri:                "https://github.com/synapticism/wordpress-gulp-starter-kit"
-, theme-author:             "Alexander Synaptic"
-, theme-author-uri:         "http://synapticism.com"
-, theme-description:        "A minimally viable theme made with the WordPress/Gulp starter kit"
-, theme-version:            "0.2.5"
-, theme-license:            "GPLv3"
-, theme-license-uri:        "http://www.gnu.org/licenses/gpl.txt"
-, theme-tags:               (light, responsive-layout, right-sidebar, starter-theme, two-columns, translation-ready, white)
-, theme-text-domain:        "voidx"
-, theme-text-domain-path:   "/languages/"
+  theme-name:               "Descent",
+  theme-uri:                "https://github.com/rickisen/descent",
+  theme-author:             "rickisen",
+  theme-author-uri:         "http://rickisen.se",
+  theme-description:        "Minimal theme Based on Alexander Synaptic's voidx",
+  theme-version:            "0.0.1",
+  theme-license:            "GPLv3",
+  theme-license-uri:        "http://www.gnu.org/licenses/gpl.txt",
+  theme-tags:               (light, responsive-layout, starter-theme, translation-ready, white),
+  theme-text-domain:        "descent",
+  theme-text-domain-path:   "/languages/"
 );

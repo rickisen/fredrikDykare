@@ -10,18 +10,18 @@
               <?php wp_link_pages(); ?>
             </div>
             <footer class="entry-meta">
-              <?php printf( __( 'Posted <time datetime="%1$s">%2$s</time> by %3$s. ', 'voidx' ), get_post_time('c'), get_the_date(), get_the_author() ); ?>
-              <?php _e( 'Categories: ', 'voidx' ); the_category( ', ' ); echo '. '; ?>
+              <?php printf( __( 'Posted <time datetime="%1$s">%2$s</time> by %3$s. ', 'descent' ), get_post_time('c'), get_the_date(), get_the_author() ); ?>
+              <?php _e( 'Categories: ', 'descent' ); the_category( ', ' ); echo '. '; ?>
             </footer>
           </article>
         <?php endwhile ?>
       <?php else : ?>
         <article id="post-0" class="post no-results not-found">
           <header class="entry-header">
-            <h1><?php _e( 'Not found', 'voidx' ); ?></h1>
+            <h1><?php _e( 'Not found', 'descent' ); ?></h1>
           </header>
           <div class="entry-content">
-            <p><?php _e( 'Sorry, but your request could not be completed.', 'voidx' ); ?></p>
+            <p><?php _e( 'Sorry, but your request could not be completed.', 'descent' ); ?></p>
             <?php get_search_form(); ?>
           </div>
         </article>

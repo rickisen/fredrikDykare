@@ -57,6 +57,30 @@ body {
         min-height: 90vh;
       }
 
+      #frontpage-page {
+
+        @include media-below($break-large) {
+          .entry-content {
+            width:100%;
+            float: none;
+          }
+        }
+      }
+
+      article {
+        @extend %clearfix;
+
+        #main-image {
+          @include inset-img;
+
+          @include media-below($break-large) {
+            float: none;
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+
       .puffs {
         box-sizing:border-box;
         display: flex;

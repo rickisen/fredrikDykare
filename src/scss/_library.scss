@@ -63,9 +63,17 @@
 
 @mixin bgimg {
   background-color:grey;
+  outline: 1px solid #bbb;
   background-size:cover;
   background-position:center center;
   background-repeat:no-repeat;
   min-width:50px;
   min-height:50px;
+}
+
+@mixin inset-img {
+  float: right;
+  width: 33%;
+  height: 20rem;
+  margin: 0 0 2rem 2rem;
 }

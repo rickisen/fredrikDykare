@@ -6,11 +6,7 @@
     ?>
   <div class="puffs">
     <?php while($postTypeObject->have_posts() && $count++ < 3): $postTypeObject->the_post(); ?>
-      <figure class="puff">
-          <a href="<?php the_permalink() ?>"><h3> <?php the_title(); ?></h3></a>
-          <div class="background-img"style="background-image:url(<?php echo get_post_meta( get_the_ID(), '_image', true ) ?>);"></div>
-        <figcaption><?php the_excerpt() ?></figcaption>
-      </figure>
+      <?php get_template_part('template-parts/puff'); ?>
     <?php endwhile; ?>
   </div>
 </section>

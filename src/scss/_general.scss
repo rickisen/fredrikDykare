@@ -72,3 +72,13 @@ img {
   @include bgimg;
 }
 
+.excerpt {
+  @extend %clearfix;
+
+  .background-img {
+    height: 5rem;
+    width: 5rem;
+    float: left;
+    margin-right: 1rem;
+  }
+}

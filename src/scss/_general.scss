@@ -13,12 +13,13 @@ body {
   > header {
     @extend %drop-shadow;
     background: color(header-background);
+    // border-bottom: 4px solid #0ba;
+    border-bottom: 4px solid #0cc;
   }
 
   main {
     @extend %drop-shadow;
-    padding: 1rem;
-    top-margin: none;
+    padding: 1rem 2rem;
     background: color(main-background);
   }
 
@@ -36,6 +37,12 @@ h5,
 h6 {
   font-weight: normal;
   line-height: 1.22222;
+}
+
+hr {
+  border: 1px solid transparent;
+  border-top: 1px solid lightgrey;
+  width: 50%;
 }
 
 a {
@@ -60,3 +67,8 @@ img {
   height: auto;
   max-width: 100%;
 }
+
+.background-img {
+  @include bgimg;
+}
+

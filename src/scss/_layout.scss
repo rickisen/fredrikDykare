@@ -3,15 +3,21 @@
 body {
   > header {
     overflow:hidden;
-    @include media-below($width-site) {
-      padding:0 1rem;
+    padding:0 1rem;
+
+    button {
+      float:right;
     }
 
     .site-navigation {
       display: none;
+      clear: both;
 
       li {
+        display: block;
+        text-align: center;
         float: none;
+        margin-right:0;
       }
 
       @include media-above($break-medium) {
@@ -20,13 +26,26 @@ body {
         display: block !important;
 
         li {
+          display: list-item;
+          text-align: left;
           float: left;
+          margin-right:1rem;
         }
       }
 
       &.active {
         display: block;
       }
+    }
+
+    @include media-below($break-medium) {
+      .site-title {
+        margin:0 !important;
+      }
+    }
+
+    .site-branding {
+      float:left;
     }
 
     .site-title {
